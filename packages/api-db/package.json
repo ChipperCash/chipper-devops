@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Exposes the DB version",
   "main": "index.ts",
+  "type": "module",
   "scripts": {
     "build": "tsc",
-    "migrate": "NODE_PATH=build node dist/migrate.js",
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
     "start": "NODE_PATH=build node dist/index.js"
   },
   "dependencies": {
@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@types/jest": "^26.0.18",
-    "jest": "^26.6.3"
+    "jest": "^26.6.3",
+    "ts-jest": "^26.4.4"
   }
 }

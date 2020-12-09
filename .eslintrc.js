@@ -14,5 +14,10 @@ module.exports = {
   ],
   parserOptions: {
     project: './tsconfig.json',
-  }
+  },
+  rules: {
+    'import/prefer-default-export': 0,
+    'no-console': 0
+  },
+  ignorePatterns: ["jest.config.js", ".eslintrc.js"],
 }
